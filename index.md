@@ -33,3 +33,23 @@ Además, plantea los distintos problemas que comparten todos los CF. En este asp
 Me encantó el hincapié que hizo con que el MAE tiene el problema de que no pondera el error por la “importancia” que se les había dado a las recomendaciones. Es muy cierto que mientras mayor sea la posición de una recomendación, su error debería ser castigado en una mayor medida ya que las recomendaciones más altas son las que más importan al fin y al cabo.
 
 Por último, me pregunto porqué no se puede automatizar el _novelty_ y el _serendipity_. Esto porque se podría “encuestar” a los usuarios cuando se realizan estas recomendaciones, preguntando si ese dominio es nuevo para ellos o no (y si les gustó). Quizás es muy invasivo, pero en el paper se habla de que se usa a gente real (osea participantes en vivo) para poder saber si funcionó o no.
+
+
+## #3 Scalable Collaborative Filtering Approaches for Large Recommender Systems
+
+Me encantó el problema analizado, ya que encuentro que es una de las falencias en muchas implementaciones de ML. Muchas veces, se utilizan algoritmos existentes en librerías, pero no se toma en cuenta cómo se va a comportar ese servicio a medida que el sistema escala.
+
+En especial MF, que para entrenar el modelo se requiere de mucho procesamiento, a medida que crece el dataset se vuelve muy caro realizarlo al pie de la letra.
+
+Encontré muy inteligente como repartieron los datos que tenían, ya que esto puede cambiar enormemente cómo se evalúa a un RS, lo cual lo explicitan en una parte favoreciendo al set ordenado.
+
+Si bien pusieron los tiempos de entrenamiento de sus modelos v/s la precisión de estos (RMSE), encuentro que faltó poner los recursos (RAM, núcleos, etc) que fueron utilizados. En cada uno de esos ejes, también se puede mover la precisión y tiempo por lo que sería interesante ver la importancia del contexto en donde se corren estas pruebas.
+
+## #4 Collaborative Filtering for Implicit Feedback Datasets
+
+
+Me gustó que el autor fuese sincero en que su estudio se basó en *implicit feedback* porque no tenían el setup para obtener *explicit feedback*. Estas decisiones pasan más seguido de lo que uno cree.
+
+Encontré interesante que incluso con implicit feedback, uno es capaz de dar una algo de transparencia de las recomendaciones. Más aún cuando se utilizan factores latentes ya que se vuelven una “abstracción” de los gustos del usuario.
+
+Si bien el paper era interesante, encontré que muchas veces las decisiones de diseño de sus algoritmos recaían mucho en el dominio que se estaba analizando. Me hubiese gustado que fuese más general
