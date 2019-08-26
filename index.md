@@ -49,9 +49,14 @@ Una crítica que tengo sobre este paper es que mezclan MF y NB dando a conocer l
 
 ## #4 Collaborative Filtering for Implicit Feedback Datasets
 
-
 Me gustó que el autor fuese sincero en que su estudio se basó en *implicit feedback* porque no tenían el setup para obtener *explicit feedback*. Estas decisiones pasan más seguido de lo que uno cree.
+
+Me sorprendió que el autor recalca que en implicit feedback no sirve ajustar los valores (con el promedio de los items o de los usuarios), algo que siempre asumía que mejoraba las predicciones. Obviamente esto sí sirve en explicit feedback.
+
+El supuesto de que si el usuario ha consumido el producto, le gusta y si no; no, lo encuentro brutal ya que me sorprende de que funcione. Eso sí, me gustaría ver qué tanto afecta al _novelty_ y _serendipity_, ya que (según yo) se ven afectados por este supuesto, porque estos buscan asociar usuarios a nuevos productos que no han consumido (por lo que en este _approach_ se asume que no les gusta)
 
 Encontré interesante que incluso con implicit feedback, uno es capaz de dar una algo de transparencia de las recomendaciones. Más aún cuando se utilizan factores latentes ya que se vuelven una “abstracción” de los gustos del usuario.
 
-Si bien el paper era interesante, encontré que muchas veces las decisiones de diseño de sus algoritmos recaían mucho en el dominio que se estaba analizando. Me hubiese gustado que fuese más general
+Si bien el paper era interesante, encontré que muchas veces las decisiones de diseño de sus algoritmos recaían mucho en el dominio que se estaba analizando. Me hubiese gustado que fuese más general.
+
+Un detalle (muy menor pero me molestó) es que comienza el paper haciendo gancho con e-commerce, pero luego salta a todo el análisis de las películas.
