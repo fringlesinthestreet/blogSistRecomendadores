@@ -45,6 +45,8 @@ Encontré muy inteligente como repartieron los datos que tenían, ya que esto pu
 
 Si bien pusieron los tiempos de entrenamiento de sus modelos v/s la precisión de estos (RMSE), encuentro que faltó poner los recursos (RAM, núcleos, etc) que fueron utilizados. En cada uno de esos ejes, también se puede mover la precisión y tiempo por lo que sería interesante ver la importancia del contexto en donde se corren estas pruebas.
 
+Una crítica que tengo sobre este paper es que mezclan MF y NB dando a conocer las debilidades de ambos métodos (muy global y muy localizado respectivamente), pero no encontré en ningún lado si su combinación lograba solucionar o mitigar sus deficiencias. Personalmente lo asumí hasta que me surgió la duda.
+
 ## #4 Collaborative Filtering for Implicit Feedback Datasets
 
 
