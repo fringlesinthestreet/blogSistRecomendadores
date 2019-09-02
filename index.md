@@ -61,12 +61,12 @@ Si bien el paper era interesante, encontré que muchas veces las decisiones de d
 
 Un detalle (muy menor pero me molestó) es que comienza el paper haciendo gancho con e-commerce, pero luego salta a todo el análisis de las películas.
 
-#### #5 Performance of Recommender Algorithms
+## #5 Performance of Recommender Algorithms
 
 El paper se basa en que criterios clásicos de error (MAE y RMSE) no son buenos para evaluar recomendadores top-N. Para estas prácticas es mejor utilizar formas "alternativas" de evaluación (en su año ~2010) basadas en _accuracy_,  como el _recall_ y _precision_.
 
 Para evaluar esto se utilizaron varios recomendarores del estado del arte de la época (MovieAvg, TopPop, AsymSVD, pureSVD, etc) y se utilizaron evaluaciones basadas en _accuracy_ para evaluarlos.
 
-Encontré interesante que en el test set solo dejaran las evaluaciones de 5 estrellas. Es muy ingenioso ya que así se aseguran de que cuando la lista top-N contenga una película del test set es un _hit_ y si no, un miss_. Esto eso sí, disminuía considerablemente el tamaño del test set.
+Encontré interesante que en el test set solo dejaran las evaluaciones de 5 estrellas. Es muy ingenioso ya que así se aseguran de que cuando la lista top-N contenga una película del test set es un _hit_ y si no, un _miss_. Esto eso sí, disminuía considerablemente el tamaño del test set.
 
 Hubiese sido interesante que utilizaran para comparar otras métricas (como MAP y DCG) para ver el efecto tanto en el posicionamiento y no sólo la presencia del item en la lista entregada como recomendación.
