@@ -70,3 +70,13 @@ Para evaluar esto se utilizaron varios recomendarores del estado del arte de la 
 Encontré interesante que en el test set solo dejaran las evaluaciones de 5 estrellas. Es muy ingenioso ya que así se aseguran de que cuando la lista top-N contenga una película del test set es un _hit_ y si no, un _miss_. Esto eso sí, disminuía considerablemente el tamaño del test set.
 
 Hubiese sido interesante que utilizaran para comparar otras métricas (como MAP y DCG) para ver el efecto tanto en el posicionamiento y no sólo la presencia del item en la lista entregada como recomendación.
+
+# #6 Content-based artwork recommendation 
+
+El paper se basa en detallar un algoritmo basado en contenido para recomendar piezas de arte física (pueden ser cuadros, esculturas). Se utilizó un algoritmo basado en contenido debido a que en el mundo del arte hay piezas que tienen un solo dueño, dificultando el trabajo de un algoritmo basado en CF.
+
+Para esto se utilizó metadata precomputada de los cuadros (color, tema, estilo, etc) y un algoritmo visual (que normalmente es usado para videos o ropa). Se utilizó la similitud de coseno para obtener los scores. 
+
+Entre los resultados, se obtiene que FA es un buen algoritmo para realizar predicciones (simple y buen desempeño). Me encantó el detalle que dieron que igual puede no ser confiable debido a que si un usuario ha comprado todos las las obras de su FA, entonces resulta difícil obtener un nuevo FA. Además, comprueban esta sospecha utilizando distintos perfiles de usuarios y comprobando que a medida que crece la cantidad de items estos algoritmos decrecen en desempeño.
+
+Me gustó la conclusión de que los basados en reconocimiento de imágenes se mantenían más estables, pero encuentro que faltó considerar los recursos que se deben utilizar para realizar el reconocimiento de una escultura. Al comienzo se hace hincapié en que las ventas físicas incluían tanto cuadros como esculturas de artistas, pero luego en el análisis pareciera que sólo hablan de esculturas al extraer las _features_ que dictan. Una imagen de una escultura se ve muy influenciada en cómo se saca su foto (versus un cuadro que es 2D nomás).
