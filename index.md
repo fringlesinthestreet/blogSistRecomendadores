@@ -80,3 +80,15 @@ Para esto se utilizó metadata precomputada de los cuadros (color, tema, estilo,
 Entre los resultados, se obtiene que FA es un buen algoritmo para realizar predicciones (simple y buen desempeño). Me encantó el detalle que dieron que igual puede no ser confiable debido a que si un usuario ha comprado todos las las obras de su FA, entonces resulta difícil obtener un nuevo FA. Además, comprueban esta sospecha utilizando distintos perfiles de usuarios y comprobando que a medida que crece la cantidad de items estos algoritmos decrecen en desempeño.
 
 Me gustó la conclusión de que los basados en reconocimiento de imágenes se mantenían más estables, pero encuentro que faltó considerar los recursos que se deben utilizar para realizar el reconocimiento de una escultura. Al comienzo se hace hincapié en que las ventas físicas incluían tanto cuadros como esculturas de artistas, pero luego en el análisis pareciera que sólo hablan de esculturas al extraer las _features_ que dictan. Una imagen de una escultura se ve muy influenciada en cómo se saca su foto (versus un cuadro que es 2D nomás).
+
+## #7 Document Clustering Based On NMF
+
+En este paper se propone una forma de realizar clustering de documentos, el cual se basa en abstraer los documentos en una adición combinada de distintos ejes (tópicos bases). La idea después es clusterear utilizando el eje (tópico base) con mayor valor de proyección.
+
+Algo interesante es que se considera (muy inteligentemente) que los tópicos (ejes) pueden estar relacionados entre sí, por lo que no son necesariamente ortogonales, como uno puede asumir en una solución más _naive_.
+
+Como bien dijo el profe, sí se siguen usando técnicas clásicas, por ejemplo stemming, para hacer un preprocesamiento de las palabras del texto y tener un mejor _recall_.
+
+La verdad me encantó que siempre le dieran un significado a sus resultados. Por ejemplo, al concluir que al no forzar ortogonalidad se llega a mejores resultados, los autores hacen hincapié en su significado “humano” y es que no tiene sentido forzar esa distancia ya que en la vida real hay tópicos más relacionados con otros y la separación no debe ser siempre “cuadrada”.
+
+Lo que quizás faltó que pocos papers encuentro que lo agregan, es como escala este approach. Puede ser que entregue un mejor resultado pero quizás se pierde en aspectos de eficiencia o recursos. Me hubiese gustado al menos una comparación empírica de la complejidad de ejecutar este algoritmo en comparación a los del estado del arte.
