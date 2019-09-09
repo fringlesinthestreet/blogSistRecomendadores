@@ -92,3 +92,15 @@ Como bien dijo el profe, sí se siguen usando técnicas clásicas, por ejemplo s
 La verdad me encantó que siempre le dieran un significado a sus resultados. Por ejemplo, al concluir que al no forzar ortogonalidad se llega a mejores resultados, los autores hacen hincapié en su significado “humano” y es que no tiene sentido forzar esa distancia ya que en la vida real hay tópicos más relacionados con otros y la separación no debe ser siempre “cuadrada”.
 
 Lo que quizás faltó que pocos papers encuentro que lo agregan, es como escala este approach. Puede ser que entregue un mejor resultado pero quizás se pierde en aspectos de eficiencia o recursos. Me hubiese gustado al menos una comparación empírica de la complejidad de ejecutar este algoritmo en comparación a los del estado del arte.
+
+## #8 Content-Based Recommendation System 
+
+Me encantó la introducción que tuvo. Era súper amigable al leer (a veces innecesariamente simple) y presentaba bien el paper. Además, realizaba una introducción a distintos tipos de sistemas recomendadores.
+
+Me fijé que era un libro y que este capítulo se encargaba de explicar los principales tipos de sistemas de recomendación basados en contenido. Cómo está el estado del arte y principales ventajas/desventajas de las técnicas descritas.
+
+Me interesó que nombra que se puede combinar content-based y CF para poder transformar los ratings a algo más basado en el contenido al cuál el usuario le dió like/dislike. Esta combinación es algo como lo que estamos usando en la tarea y hace mucho sentido ahora que lo pienso.
+
+Eso de tratar a las queries pasadas de los usuarios como documentos “que le gustan” creo que es parte de lo que usa youtube para recomendar. Lo interesante es que se puede “deshabilitar” este seguimiento por parte de youtube y se nota el cambio en las recomendaciones (al fin no me salen puras cosas de lol jeje)
+
+Siendo completamente sincero me decepcioné cuando me dí cuenta que era un libro, ya que estaba bien básica la introducción y pensé que en algún momento iba a tomar vuelo en algo interesante. No es que no fuera interesante pero faltaron esos "tips" que dan a veces los papers.
