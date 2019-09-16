@@ -104,3 +104,15 @@ Me interesó que nombra que se puede combinar content-based y CF para poder tran
 Eso de tratar a las queries pasadas de los usuarios como documentos “que le gustan” creo que es parte de lo que usa youtube para recomendar. Lo interesante es que se puede “deshabilitar” este seguimiento por parte de youtube y se nota el cambio en las recomendaciones (al fin no me salen puras cosas de lol jeje)
 
 Siendo completamente sincero me decepcioné cuando me dí cuenta que era un libro, ya que estaba bien básica la introducción y pensé que en algún momento iba a tomar vuelo en algo interesante. No es que no fuera interesante pero faltaron esos "tips" que dan a veces los papers.
+
+## #9 BPR: Bayesian Personalized Ranking from Implicit Feedback 
+
+El paper se propone un método para realizar recomendaciones de _implicit feedback_. Los autores proponen el framework BPR con un criterio particular para optimizar y uno para realizar el _learning_ de BPR, comparándolo con los criterios actuales utilizados al combinar BPR con algoritmos recomendadores de la época como MF y KNN. 
+
+El criterio optimizado por el algoritmo propuesto en el paper, es poder entregar un ranking personalizado (a través de ordenamiento de pares). Este es distinto al que el autor llama “típico” de los algoritmos de MF y KNN, los cuales optimizan sus parámetros para poder saber si un item es seleccionado por un usuario o no.
+
+En este paper se utiliza el ordenar pares de items en vez de reemplazar los valores faltantes por valores negativos. El criterio es simple: siempre se prefiere al item que el usuario ha visto por sobre otro que no. Si se tiene un par de items I y J, si el usuario ha visto ambos o ninguno, no se puede saber la preferencia. 
+
+Me gustó que explicara el aporte de performance que da el sampling de los pares en comparación a recorrer todos los pares del dataset. Además, el hecho de que se dieran cuanta que no era necesario completar el ciclo para obtener convergencia, sino que con una fracción de este puede bastar. 
+
+Me hubiese gustado que no solo hayan intentado de hacer sampling con distribución uniforme, sino que buscar alguna manera de sacar las muestras inteligentemente. No digo que es malo, ya que cumple con el objetivo de evitar que se saque el mismo orden de forma consecutiva, pero sería interesante quizás forzar distintos órdenes, por ejemplo.
