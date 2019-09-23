@@ -116,3 +116,18 @@ En este paper se utiliza el ordenar pares de items en vez de reemplazar los valo
 Me gustó que explicara el aporte de performance que da el sampling de los pares en comparación a recorrer todos los pares del dataset. Además, el hecho de que se dieran cuanta que no era necesario completar el ciclo para obtener convergencia, sino que con una fracción de este puede bastar. 
 
 Me hubiese gustado que no solo hayan intentado de hacer sampling con distribución uniforme, sino que buscar alguna manera de sacar las muestras inteligentemente. No digo que es malo, ya que cumple con el objetivo de evitar que se saque el mismo orden de forma consecutiva, pero sería interesante quizás forzar distintos órdenes, por ejemplo.
+
+## #10 Deep Neural Networks for YouTube Recommendations 
+
+Este paper trata de manera muy general los desafíos de recomendación de youtube (muchos datos, se deben recomendar videos nuevos, mucho ruido) y cómo utilizando redes neuronales profundas lo resuelven de manera eficiente. El problema de recomendación se separa en dos sub-problemas: generación de candidatos y ranking.
+
+Se utilizan los candidatos seleccionados por la red neuronal para ser utilizados para la recomendación (dado que si se usan todos, serían demasiados videos por usuario) y luego se utiliza la red de ranking para obtener la lista de recomendación final.
+
+En el paper se realizan comparaciones de precisión utilizando solo la información histórica de los videos vistos, utilizando también el historial de búsquedas e información contextual (edad, género, región, etc) normalizada. Se mostró que mientras más información utiliza la red, mejor es la predicción.
+
+Además, en el paper se toca el tema de la estructura de la red neuronal (cuántos niveles y cuántas neuronas por nivel), pero encuentro que se ve súper poco y sólo se muestra una tabla resumen para ver las precisiones de las distintas configuraciones. Lo que rescato es el cómo muestran los resultados del cruce entre: los distintos tamaños de la red y la información utilizada. El gráfico lo deja súper claro.
+
+Me pareció muy curioso eso de que tratan al historial de búsqueda como “una bolsa de tokens” y de hacer un rollback a un momento de su historia y aprovechar esas vistas en vez de siempre utilizar las más recientes. Personalmente, hoy en día he visto muchos videos de #Teloresumoasínomás y youtube no me recomienda puras cosas de ese canal (hay algunas, pero si se basara fuertemente en los últimos videos vistos, serían solo de esas).
+
+La crítica más grande que tengo es que no dan muchos detalles de cómo lo hicieron. Entiendo que es una empresa y su valor está en su tecnología, pero por último tener una referencia de algo más simple pero práctico. Por esto mismo encuentro que es difícil refutar lo que youtube dice en el paper. Si no se puede reproducir, no se puede comprobar que lo que dicen es verdad.
+
