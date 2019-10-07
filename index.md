@@ -136,3 +136,5 @@ La crítica más grande que tengo es que no dan muchos detalles de cómo lo hici
 En este paper se explica una extensión de _Thompson Sampling_. En su forma más pura es heurística busca maximizar la ganancia (o minimizar la pérdida) basado en elegir la ‘acción’ (en este caso la recomendación) que maximice la ganancia esperada. La idea es utilizar un ensemble de recomendadores para “precargar” un set de acciones disponibles.
 
 Esta extensión se implementa en el contexto del e-commerce y se busca que sea los más amigable posible para ser integrado en las aplicaciones existentes, ya que se basa en componentes que se van agregando para que el Thompson Sampling tenga mayor cantidad de opciones.
+
+Mis únicos comentarios son que, si bien muestran un análisis de los _datasets_ utilizados, no dicen cómo separaron el dataset entre entrenamiento, validación y test. Además, tampoco explicitan el porqué usaron N=5, puede que las métricas cambien si agrandan el N a 10 por ejemplo.
