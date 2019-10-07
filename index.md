@@ -131,3 +131,8 @@ Me pareció muy curioso eso de que tratan al historial de búsqueda como “una 
 
 La crítica más grande que tengo es que no dan muchos detalles de cómo lo hicieron. Entiendo que es una empresa y su valor está en su tecnología, pero por último tener una referencia de algo más simple pero práctico. Por esto mismo encuentro que es difícil refutar lo que youtube dice en el paper. Si no se puede reproducir, no se puede comprobar que lo que dicen es verdad.
 
+## #11 Ensemble Recommendations via Thompson Sampling: an Experimental Study within e-Commerce
+
+En este paper se explica una extensión de _Thompson Sampling_. En su forma más pura es heurística busca maximizar la ganancia (o minimizar la pérdida) basado en elegir la ‘acción’ (en este caso la recomendación) que maximice la ganancia esperada. La idea es utilizar un ensemble de recomendadores para “precargar” un set de acciones disponibles.
+
+Esta extensión se implementa en el contexto del e-commerce y se busca que sea los más amigable posible para ser integrado en las aplicaciones existentes, ya que se basa en componentes que se van agregando para que el Thompson Sampling tenga mayor cantidad de opciones.
