@@ -138,3 +138,18 @@ En este paper se explica una extensión de _Thompson Sampling_. En su forma más
 Esta extensión se implementa en el contexto del e-commerce y se busca que sea los más amigable posible para ser integrado en las aplicaciones existentes, ya que se basa en componentes que se van agregando para que el Thompson Sampling tenga mayor cantidad de opciones.
 
 Mis únicos comentarios son que, si bien muestran un análisis de los _datasets_ utilizados, no dicen cómo separaron el dataset entre entrenamiento, validación y test. Además, tampoco explicitan el porqué usaron N=5, puede que las métricas cambien si agrandan el N a 10 por ejemplo.
+
+## #12 The Effect of Explanations and Algorithmic Accuracy on Visual Recommender Systems of Artistic Images
+
+En este paper se ven dos algoritmos para recomendar piezas de arte: DNN (Deep Neuronal Networks) y AVF (Attractiveness Visual Features). Cada uno tiene sus ventajas y desventajas con respecto al otro. Por ejemplo, DNN es mejor con respecto a la precisión pero AVF le gana en transparencia, es decir, poder explicar porqué se está recomendando algo. Esto es importante, porque al parecer el poder explicar las recomendaciones aumenta la satisfacción de los usuarios.
+
+Encontré que adecuaron algunas de las decisiones de diseño tomadas. Por ejemplo, el hecho de que se trata de obras y que cuando una se vende ya no está disponible “para que otro usuario pueda comprarlo”, hace que Collaborative Filtering pierda sentido y por eso ellos utilizan _content-based recomendations_.
+
+Es interesante que con DNN igual se puede saber “porqué” el algoritmo recomienda una pieza de arte. Eso sí, se basa en los rasgos o _features_ obtenidos por una red convolucional, y el problema recae en que estos rasgos o _features_ pueden ser perfectos para relacionar las piezas de arte pero no son ni el brillo, ni ninguna característica “típica” para las personas. 
+
+Es por esto que encontré que fue una buena decisión presentar la explicación de la recomendación a nivel _black-box_, es decir, dado que se recomienda una obra porque se parece a otra (en base a estos rasgos o _features_ no entendibles), ellos no entran en los detalles de porqué esa pieza de arte se parece a la otra ( _white-box_ ), pero informan de que se está recomendando porque se parece a la otra ( _black-box_ ). Esta es una diferencia sutil pero hace que se pueda explicar, a grandes rasgos, porqué se está recomendando la imagen.
+
+La interfaz utilizada ayuda muchísimo a visualizar las recomendaciones a nivel _white-box_ o _black-box_. Me quedó la duda: ¿de dónde salió? ¿Las hicieron ellos? quizás se me pasó pero no se habla mucho de su origen (poca relevancia con el estudio)
+
+Otra duda que me queda es que como DNN genera miles de dimensiones, se podría hacer una relación lineal entre estas dimensiones y las utilizadas por el algoritmo AVF? Si se puede, se podría utilizar la interfaz que proporciona mayor información a los usuarios (mejor transparencia) y utilizar DNN (mejor precisión).
+
