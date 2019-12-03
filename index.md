@@ -2,6 +2,8 @@
 
 Autor: Benjamín Cárcamo
 
+[Entregas atrasadas al final](https://github.com/fringlesinthestreet/blogSistRecomendadores/blob/master/index.md#entregas-atrasadas)
+
 ### Opiniones
 
 ## #1 Slope One Predictors for Online Rating-Based Collaborative Filtering.
