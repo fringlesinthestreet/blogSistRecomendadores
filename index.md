@@ -153,3 +153,22 @@ La interfaz utilizada ayuda muchísimo a visualizar las recomendaciones a nivel 
 
 Otra duda que me queda es que como DNN genera miles de dimensiones, se podría hacer una relación lineal entre estas dimensiones y las utilizadas por el algoritmo AVF? Si se puede, se podría utilizar la interfaz que proporciona mayor información a los usuarios (mejor transparencia) y utilizar DNN (mejor precisión).
 
+-----
+
+# Entregas Atrasadas
+
+## #13 Evaluating Collaborative Filtering Recommender Systems 
+
+Hoy en día existen distintos tipos de algoritmos para realizar CF. A estos algoritmos se les hacen distintas evaluaciones para identificar cuál realiza mejores recomendaciones que otros. Esto es especialmente difícil porque existen muchos factores que influyen en la evaluación.
+
+Esto hace que sea difícil comparar distintos estudios de sistemas recomendadores basados en CF, ya que cada uno prueba sus algoritmos utilizando (muchas veces) distintos datasets, distintas métricas e incluso puede ser que el fin u objetivo de cada sistema recomendador sea distinto.
+
+Por ejemplo, las características del dataset influyen ya que algunos algoritmos están diseñados para ser mejores con ciertas condiciones (cantidad de usuarios > cantidad de items, o viceversa). Por otro lado, puede ser que un sistema se enfoque en realizar recomendaciones para que los usuarios descubran nuevos items, entonces los usuarios pueden quedar felices si hay 1 item “nuevo y correcto” en el ranking. En contraste, puede ser que el enfoque sea en que se maximice la cantidad de items que le acierta el sistema para que el usuario compre más.
+
+Es muy interesante cuando habla de las tareas que no habían sido estudiadas en la literatura. Por ejemplo, el de encontrar **todos** los “buenos items” a priori suena mala idea, pero dado el contexto que se presenta (abogados) hace mucho sentido. Otro muy interesante es el _Just browsing_, el cual yo lo he hecho y probablemente (sin saberlo) fui “descalibrando” el sistema recomendador que me estaba asistiendo en mi búsqueda y yo no terminaba comprando las cosas que sí me gustan (y que en ese instante no tenía intención de comprar nomás).
+
+El último de estas tareas, el _Find Credible Recommender_, lo hablamos en clases y al parecer sí se han hecho estudios sobre esto. Quizás no sobre el contexto de Sistemas Recomendadores pero puede ser que sea sobre comportamiento de las personas. El profe contaba que a veces era útil poner en la lista de recomendación una película que el usuario ya había visto (con alto rating del usuario) para que “sienta que la recomendación estaba bien”.
+
+Algo que siempre encuentro que falta en los papers que presentan un nuevo sistema recomendador, es que se no se fijan en el manejo de recursos que toma el algoritmo en comparación a sus baselines. En esta lectura no se ve nada de eso tampoco y encuentro que es un punto de comparación fuerte para que, una empresa por ejemplo, adopte un algoritmo que aparece en una publicación y pueda integrarlo a su sistema productivo.
+
+Otro tema que explicitan que no se ve en la lectura es la robustez, la cual no sabía a qué se refería en el contexto de los sistemas recomendadores y es todo un desafío para poder sanitizar los datos recolectados por los sistemas recomendadores y evitar que a través de _spam_ se pueda privilegiar a ciertos productos, películas, etc.
