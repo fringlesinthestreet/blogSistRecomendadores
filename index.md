@@ -174,3 +174,23 @@ El último de estas tareas, el _Find Credible Recommender_, lo hablamos en clase
 Algo que siempre encuentro que falta en los papers que presentan un nuevo sistema recomendador, es que se no se fijan en el manejo de recursos que toma el algoritmo en comparación a sus baselines. En esta lectura no se ve nada de eso tampoco y encuentro que es un punto de comparación fuerte para que, una empresa por ejemplo, adopte un algoritmo que aparece en una publicación y pueda integrarlo a su sistema productivo.
 
 Otro tema que explicitan que no se ve en la lectura es la robustez, la cual no sabía a qué se refería en el contexto de los sistemas recomendadores y es todo un desafío para poder sanitizar los datos recolectados por los sistemas recomendadores y evitar que a través de _spam_ se pueda privilegiar a ciertos productos, películas, etc.
+
+## #14 Evaluating Recommendation Systems 
+
+En esta lectura también se enfrentan al problema de cómo evaluar distintos sistemas recomendadores. Se da un enfoque basado en que los sistemas recomendadores tienen propiedades propias y que, dependiendo de esas propiedades, se deben realizar los experimentos de un modo u otro (offline, grupo de usuarios u online). Luego, se rankean los algoritmos recomendadores según estas propiedades.
+
+El estudio no termina ahí, sino que ayuda a mejorar la calidad de las conclusiones y decisiones que se pueden tomar luego de realizar los distintos tipos de experimentos. Por ejemplo, es muy deseable poder generalizar los resultados de los experimentos, pero para esto se debe tener cierto criterio para poder realizarlo. Se debe probar sobre varios datasets, por ejemplo. Se debe entender bien las propiedades de los datasets utilizados, ya que los resultados pueden potenciarse por sus características.
+
+Un tema que se habla es que el fin de las pruebas offline es poder dejar fuera la mayor cantidad de candidatos de algoritmos para evitar elevar costos al realizar estudios posteriores (_user studies_ y online). Sin embargo, muchas veces en los paper sólo se realizan este tipo de pruebas debido a que se usan datasets públicos.
+
+Igual se habla de que si vienen _timestamps_ en los datos, se puede “simular” una prueba online tomando algunos usuarios y “parándose en cierto punto del tiempo”, y así simular cómo estaría entrenado el algoritmo para ese punto y ver cómo responde a la situación.
+
+Un dato interesante es que en los estudios de usuarios, según el paper, las personas tienden a sastisfacer a la compañía/investigadores, incluso más aún si estos fueron pagados para realizar las pruebas. El consejo que dan en este sentido es que no se debe hacer explicito el objetivo del experimento a las personas del estudio.
+
+En términos prácticos se habla de tests estadísticos como herramientas para realizar mejores conclusiones. Me gustó la métrica del _sign test_ ya que como las pruebas se iban haciendo por usuario, se ve si un algoritmo recomienda mejor **para la mayor cantidad de usuarios**.
+
+En este paper también se habla de _coverage_ y me gustó el hincapié que hace con los _cold starts_. Se habla de que puede ser bueno (se debe evaluar) recomendar estos items fríos a costa de algunos calientes, por lo que disminuye probablemente el _Accuracy_, pero podría potencialmente aumentar el _novelty_ y _serendipity_.
+
+En este paper se habla del _trust_ de los usuarios, que aumenta al encontrar recomendaciones inútiles pero acertadas. Dice que otra forma de saber la confianza del sistema es preguntarle a los usuarios en el _user study_. Encuentro que igual se contradice porque es probable que, como se dijo antes, el usuario trate de “hacernos sentir bien” y las respuestas pueden estar contaminadas.
+
+Siendo sincero, al principio del curso no me gustaban este tipo de publicaciones. Pero ahora que ha pasado un buen tiempo desde que leía un paper, está bueno para recordar cosas y aprender.
